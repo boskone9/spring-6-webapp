@@ -1,4 +1,4 @@
-package domain;
+package guru.springframework.spring6webapp.domain;
 
 import jakarta.persistence.*;
 
@@ -17,6 +17,7 @@ public class Author {
     @ManyToMany(mappedBy = "authors")
     private Set<Book> books = new HashSet<>();
 
+    @ManyToOne
     public Set<Book> getBooks() {
         return books;
     }
